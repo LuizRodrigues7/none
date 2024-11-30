@@ -1,20 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random No Button</title>
-    <link rel="stylesheet" href="style.css"/>
+    <title>Revelar Fotos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="wrapper">
-        <h2 class="question">Você gosta de mim?</h2>
-        <img class="gif" alt="gif" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjJvdWZzYXc1NGJ6aGp1cDE3b2dyNnVzOGN1andkMjVrMmRzeGwwZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3OhXBaoR1tVPW/giphy.gif" />
-        <div class="btn-group">
-            <button class="yes-btn">Yes</button>
-            <button class="no-btn">No</button>
+    <div class="container">
+        <h1>Papai...</h1>
+        <button id="revealBtn">Clique aqui</button>
+        <div>
+        <div id="photos" class="photos">
+            <div id="text" class="text">
+                <h3>Você aceita ser meu padrinho de formatura?</h3>
+            </div>
+            <img src="src/WhatsApp Image 2024-11-29 at 22.41.00 (1).jpeg" alt="Foto 1">
+            <img src="src/WhatsApp Image 2024-11-29 at 22.41.00.jpeg" alt="Foto 2">
+            <img src="src/WhatsApp Image 2024-11-29 at 22.41.01 (1).jpeg" alt="Foto 3">
+            <img src="src/WhatsApp Image 2024-11-29 at 22.41.01.jpeg" alt="Foto 4">
+            <img src="src/WhatsApp Image 2024-11-29 at 22.41.02.jpeg" alt="Foto 5">
+            <img src="src/WhatsApp Image 2024-11-29 at 22.41.02 (1).jpeg" alt="Foto 6">
+            <img src="src/WhatsApp Image 2024-11-29 at 22.41.04 (1).jpeg" alt="Foto 7">
         </div>
     </div>
-    <script src="scripts/main.js"></script>
+    
+    <script>
+        document.getElementById('revealBtn').addEventListener('click', function() {
+            var photos = document.getElementById('photos');
+            photos.classList.toggle('show'); // Alterna a classe 'show' para aplicar a transição
+        });
+    </script>
 </body>
 </html>
