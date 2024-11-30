@@ -1,69 +1,100 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Quicksand:wght@300..700&display=swap');
 
-.container {
-    text-align: center;
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+  
+    }
 
-h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
+    html body{
+        overflow-x: hidden;    
+    }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 1em;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
+    .secret-container{
+        display: grid;
+        justify-content: center;
+    }
 
-button:hover {
-    background-color: #45a049;
-}
+    .secret-button{
+        display: grid;
+        justify-content: center;
+        margin-top: 14px;
+    }
 
-/* Estilos para as fotos */
-.photos {
-    display: block; /* Iniciado como visível */
-    overflow: auto; /* Esconde o conteúdo que exceder a altura */
-    max-height: 0; /* Começa com altura zero */
-    opacity: 0; /* Começa invisível */
-    transition: max-height 1s ease, opacity 1s ease; /* Adiciona a transição suave */
-    margin-top: 20px;
-}
+    .secret-button{
+        width: 500px;
+        font-size: 55px;
+        padding: 12px;
+        transition: 1s ease;
+        border-radius: 0%;
+        background-image: linear-gradient(to left, green, rgb(59, 175, 48), rgb(85, 156, 100), white);
+        animation: gradient 8s ease infinite;
+        background-size: 450% 450%;
+    }
 
-.photos.show {
-    max-height: 500px; /* A altura máxima após a transição */
-    max-width: 600px;
-    opacity: 1; /* Torna as fotos visíveis */
-}
+    .secret-button:hover{
+        border-radius: 1rem;
+        transition: 1s ease;
+        cursor: pointer;
+    }
 
-.photos img {
-    width: 150px;
-    margin: 10px;
-    border-radius: 8px;
-}
-img{
-    max-width: 250px;
-    max-height: 250px;
-}
+    @keyframes gradient {
+        0%{
+            background-position: 0% 50%;
+        }
+        50%{
+            background-position: 100% 50%;
+        }
+        100%{
+            background-position: 0% 50%;
+        }
+    }
 
-.text{
-    
-    
-}
+    .img-container-1{
+        display: none;
+        gap: 1.5rem;
+        -webkit-animation: animate-div-1 3s;
+        justify-content: center;
+        margin-top: 14px;
+    }
+
+    .img-container-2{
+        display: none;
+        gap: 1.5rem;
+        margin-top: 20px;
+        -webkit-animation: animate-div-2 3s;
+        justify-content: center;
+        margin-top: 14px;
+    }
+
+    .img{
+        width: 300px;
+        height: 300px;
+        border: solid green;
+        border-radius: 2px 12px;
+        padding: 6px;
+    }
+
+    @-webkit-keyframes animate-div-1{
+    from { opacity: 0; margin-top: -100px;}
+    to { opacity: 1; margin-top: 20px;}
+    }
+
+    @-webkit-keyframes animate-div-2{
+    from { opacity: 0; margin-top: -100px;}
+    to { opacity: 1; margin-top: 20px;}
+    }
+
+    .Question-container{
+        display: none;
+        justify-content: center;
+        margin: 10px;
+        -webkit-keyframes: animate-div-2 ;
+        font-size: 50px;
+    }
+
+    h5{
+        filter: drop-shadow(green 0px 3px 2px);
+    }

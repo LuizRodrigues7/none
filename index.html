@@ -1,35 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revelar Fotos</title>
     <link rel="stylesheet" href="style.css">
+    <title>Daddy's Question</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Papai...</h1>
-        <button id="revealBtn">Clique aqui</button>
-        <div>
-        <div id="photos" class="photos">
-            <div id="text" class="text">
-                <h3>Você aceita ser meu padrinho de formatura?</h3>
-            </div>
-            <img src="src/WhatsApp Image 2024-11-29 at 22.41.00 (1).jpeg" alt="Foto 1">
-            <img src="src/WhatsApp Image 2024-11-29 at 22.41.00.jpeg" alt="Foto 2">
-            <img src="src/WhatsApp Image 2024-11-29 at 22.41.01 (1).jpeg" alt="Foto 3">
-            <img src="src/WhatsApp Image 2024-11-29 at 22.41.01.jpeg" alt="Foto 4">
-            <img src="src/WhatsApp Image 2024-11-29 at 22.41.02.jpeg" alt="Foto 5">
-            <img src="src/WhatsApp Image 2024-11-29 at 22.41.02 (1).jpeg" alt="Foto 6">
-            <img src="src/WhatsApp Image 2024-11-29 at 22.41.04 (1).jpeg" alt="Foto 7">
-        </div>
+    <div class="secret-container">
+        <button class="secret-button" id="botao" onclick="RevealImages()">Papai...</button>
     </div>
-    
-    <script>
-        document.getElementById('revealBtn').addEventListener('click', function() {
-            var photos = document.getElementById('photos');
-            photos.classList.toggle('show'); // Alterna a classe 'show' para aplicar a transição
-        });
-    </script>
+    <div class="img-container-1" id="box01">
+        <img src="src/WhatsApp Image 2024-11-29 at 22.41.00 (1).jpeg" alt="foto1" class="img">
+        <img src="src/WhatsApp Image 2024-11-29 at 22.41.00.jpeg" alt="foto2" class="img">
+        <img src="src/WhatsApp Image 2024-11-29 at 22.41.01 (1).jpeg" alt="foto3" class="img">
+    </div>
+    <div class="Question-container" id="question">
+        <h5>Você aceita ser o padrinho da minha formatura?</h5>
+    </div>
+    <div class="img-container-2" id="box02">
+        <img src="src/WhatsApp Image 2024-11-29 at 22.41.01.jpeg" alt="foto4" class="img">
+        <img src="src/WhatsApp Image 2024-11-29 at 22.41.02 (1).jpeg" alt="foto4" class="img">
+        <img src="src/WhatsApp Image 2024-11-29 at 22.41.02.jpeg" alt="foto4" class="img">
+    </div>
+    <script src="/scripts/main.js"></script>
 </body>
 </html>
